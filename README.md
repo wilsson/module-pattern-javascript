@@ -8,7 +8,7 @@ Es una unidad independiente funcional que forma parte de la estructura de una ap
 Es el proceso de agrupar datos y metodos en un entorno independiente.
 
 **ejemplo :**
-Caja negra : Un objecto en el que su comportamiento y atributos son conocidos pero
+Caja negra : Un objeto en el que su comportamiento y atributos son conocidos pero
 no así su trabajo interno.
 
 #### ¿Cuáles son las ventajas de un patron modular?
