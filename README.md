@@ -1,5 +1,8 @@
 PATRON MODULAR
 ===================
+Para entender el patron de diseño modular hay que entender algunos conceptos previos:
+
+#### ¿Qué es una function anonima?
 
 #### ¿Qué es un patron modular?
 Es una unidad independiente funcional que forma parte de la estructura de una aplicacíon.
