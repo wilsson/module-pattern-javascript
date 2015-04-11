@@ -2,9 +2,13 @@ PATRON MODULAR
 ===================
 Para entender el patron de diseño modular hay que entender algunos conceptos previos:
 
-#### ¿Qué es una function anonima?
+#### Objecto literal
+Un objecto literal es descrito como una lista de pares key/value , separados por comas entre llaves. Nombres dentro del objecto pueden ser
+cadenas o identificadores que son seguidas por 2 puntos.
 
-#### ¿Qué es un patron modular?
+#### ¿Qué es una función anonima?
+
+#### ¿Qué es un módulo?
 Es una unidad independiente funcional que forma parte de la estructura de una aplicacíon.
 
 #### ¿Qué es encapsulamiento?
