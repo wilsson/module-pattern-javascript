@@ -5,6 +5,17 @@ Para entender el patron de diseño modular hay que entender algunos conceptos pr
 #### Objecto literal
 Un objecto literal es descrito como una lista de pares key/value , separados por comas entre llaves. Nombres dentro del objecto pueden ser
 cadenas o identificadores que son seguidas por 2 puntos.
+**ejemplo:**
+```
+var objectoLiteral = {
+ 
+    variable : "soy una variable",
+ 
+    miFuncion: function () {
+      // ...
+    }
+};
+```
 
 #### ¿Qué es una función anonima?
 
