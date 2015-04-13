@@ -21,7 +21,7 @@ var myAnonymousFunction = function(){
 	alert("Hello World!");
 };
 ```
-#### Funciónes auto-ejecutables (closure)
+#### Funciónes auto-ejecutables
 Estas funciónes una vez declaradas se llaman a sí mismas para inicializarse, los primeros paréntesis encierran
 el contenido, los segundos paréntesis asumen que el interior de los primeros paréntesis es una función y la ejecuta
 inmediatamente.
