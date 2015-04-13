@@ -1,12 +1,16 @@
 PATRON MODULAR
 ===================
+El patron modular proporcina una forma de encapsulamiento de los metodos publicos, privados
+(y variables), en una sola entidad exponiendo solo los miembros del sector público con el mundo
+exterior del módulo, para poder entender mejor el patron modular, hay que enteder estos conceptos primero : 
+
 ### Objeto literal
 Un objeto literal es descrito como una lista de pares key/value , separados por comas entre llaves. Nombres dentro del objeto pueden ser
 cadenas o identificadores que son seguidas por 2 puntos.
 ```
 var objectLiteral = {
     variable : "soy una variable",
-    myFunction : function() {
+    myFunction : function(){
       // ...
     }
 };
@@ -36,7 +40,7 @@ Es una unidad independiente funcional que forma parte de la estructura de una ap
 ```
 var modulo = {
 	saludo : "soy parte del modulo",
-	myFunction : function() {
+	myFunction : function(){
 		alert("soy una función");
 	}
 };
@@ -52,3 +56,22 @@ no así su trabajo interno.
 
 #### Ventajas del patron modular
 Ayudan a mantener tu codigo limpio , separado y organizado.
+
+
+#### Estructura básica del patron modular
+```
+var modulo = (function(){
+	privateMethod = function(){
+		alert("soy un metodo privado");
+	};	
+	return {
+		publicMethod : function(){
+			alert("soy un meotodo publico");
+			privateMethod();
+		}
+	}
+})();
+
+/* accediendo a la parte publica de nuestro modulo */
+modulo.publicMethod();
+```
