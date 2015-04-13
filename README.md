@@ -12,22 +12,22 @@ var objectLiteral = {
 };
 ```
 #### Función anónima
-```
 Las funciónes anonimas son funciónes sin nombre, comúnmente asociados a una variable.
+```
 var myAnonymousFunction = function(){
 	alert("Hello World!");
 };
 ```
-#### Función anónima auto-ejecutable
+#### Funciónes auto-ejecutables
 Estas funciónes una vez declaradas se llaman a sí mismas para inicializarse, los primeros paréntesis encierran
 el contenido, los segundos paréntesis asumen que el interior de los primeros paréntesis es una función y la ejecuta
 inmediatamente.
 ```
-var myAnonymousFunction = (function(){
+(function(){
 	alert("Hello World!");
 })();
 
-(function(){
+var myAnonymousFunction = (function(){
 	alert("Hello World!");
 })();
 ```
