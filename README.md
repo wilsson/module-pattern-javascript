@@ -1,23 +1,24 @@
 PATRON MODULAR
 ===================
 ### Objeto literal
-Un objecto literal es descrito como una lista de pares key/value , separados por comas entre llaves. Nombres dentro del objecto pueden ser
+Un objeto literal es descrito como una lista de pares key/value , separados por comas entre llaves. Nombres dentro del objeto pueden ser
 cadenas o identificadores que son seguidas por 2 puntos.
 ```
-var objectoLiteral = {
+var objectLiteral = {
     variable : "soy una variable",
     myFunction : function() {
       // ...
     }
 };
 ```
-#### Función anonima
+#### Función anónima
 ```
+Las funciónes anonimas son funciónes sin nombre, comúnmente asociados a una variable.
 var myAnonymousFunction = function(){
 	alert("Hello World!");
 };
 ```
-#### Función anonima auto-ejecutable
+#### Función anónima auto-ejecutable
 Estas funciónes una vez declaradas se llaman a sí mismas para inicializarse, los primeros paréntesis encierran
 el contenido, los segundos paréntesis asumen que el interior de los primeros paréntesis es una función y la ejecuta
 inmediatamente.
@@ -25,6 +26,7 @@ inmediatamente.
 var myAnonymousFunction = (function(){
 	alert("Hello World!");
 })();
+
 (function(){
 	alert("Hello World!");
 })();
@@ -44,9 +46,9 @@ modulo.myFunction();
 #### Encapsulamiento
 Es el proceso de agrupar datos y metodos en un entorno independiente.
 
-**ejemplo :**
+#### **ejemplo :**
 Caja negra : Un objeto en el que su comportamiento y atributos son conocidos pero
 no así su trabajo interno.
 
 #### Ventajas del patron modular
-Ayudan a mantener tu codigo de manera limpia , separada y organizada.
+Ayudan a mantener tu codigo limpio , separado y organizado.
