@@ -1,8 +1,7 @@
 PATRON MODULAR
 ===================
-El patron modular proporcina una forma de encapsulamiento de los metodos publicos, privados
-(y variables), en una sola entidad exponiendo solo los miembros del sector público con el mundo
-exterior del módulo, para poder entender mejor el patron modular, hay que enteder estos conceptos primero : 
+El patron modular proporcina una forma de encapsulamiento de los metodos públicos, privados
+(y variables), en una sola entidad exponiendo solo los miembros del sector público con el alcance del módulo, para poder entender mejor el patrón modular, hay que enteder estos conceptos primero : 
 
 ### Objeto literal
 Un objeto literal es descrito como una lista de pares key/value , separados por comas entre llaves. Nombres dentro del objeto pueden ser
@@ -22,7 +21,7 @@ var myAnonymousFunction = function(){
 	alert("Hello World!");
 };
 ```
-#### Funciónes auto-ejecutables
+#### Funciónes auto-ejecutables (closure)
 Estas funciónes una vez declaradas se llaman a sí mismas para inicializarse, los primeros paréntesis encierran
 el contenido, los segundos paréntesis asumen que el interior de los primeros paréntesis es una función y la ejecuta
 inmediatamente.
