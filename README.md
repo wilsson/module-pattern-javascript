@@ -1,6 +1,6 @@
 PATRON MODULAR
 ===================
-### Objecto literal
+### Objeto literal
 Un objecto literal es descrito como una lista de pares key/value , separados por comas entre llaves. Nombres dentro del objecto pueden ser
 cadenas o identificadores que son seguidas por 2 puntos.
 ```
@@ -18,9 +18,17 @@ var myAnonymousFunction = function(){
 };
 ```
 #### Función anonima auto-ejecutable
+Estas funciónes una vez declaradas se llaman a sí mismas para inicializarse, los primeros paréntesis encierran
+el contenido, los segundos paréntesis asumen que el interior de los primeros paréntesis es una función y la ejecuta
+inmediatamente.
+```
 var myAnonymousFunction = (function(){
 	alert("Hello World!");
 })();
+(function(){
+	alert("Hello World!");
+})();
+```
 #### Módulo
 Es una unidad independiente funcional que forma parte de la estructura de una aplicacíon.
 ```
