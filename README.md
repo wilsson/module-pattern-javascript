@@ -4,8 +4,7 @@ El patron modular proporcina una forma de encapsulamiento de los metodos públic
 (y variables), en una sola entidad exponiendo solo los miembros del sector público con el alcance del módulo, para poder entender mejor el patrón modular, hay que enteder estos conceptos primero : 
 
 ### Objeto literal
-Un objeto literal es descrito como una lista de pares key/value , separados por comas entre llaves. Nombres dentro del objeto pueden ser
-cadenas o identificadores que son seguidas por 2 puntos.
+Un objeto literal es descrito como cero o más pares name/value, separados por comas entre llaves. Nombres dentro del objeto pueden ser cadenas o identificadores que son seguidas por 2 puntos.
 ```
 var objectLiteral = {
     variable : "soy una variable",
@@ -15,7 +14,7 @@ var objectLiteral = {
 };
 ```
 #### Función anónima
-Las funciónes anonimas son funciónes sin nombre, comúnmente asociados a una variable.
+Las funciónes anónimas son funciónes sin nombre, comúnmente asociados a una variable.
 ```
 var myAnonymousFunction = function(){
 	alert("Hello World!");
