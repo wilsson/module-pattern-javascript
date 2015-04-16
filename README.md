@@ -1,6 +1,7 @@
 PATRON MODULAR
 ===================
-El patron modular proporcina una forma de encapsulamiento de los metodos **públicos**, **privados**
+i
+El patron modular proporcina una forma de encapsulamiento de los **metodos públicos,privados**
 (y variables),en una sola entidad exponiendo solo los miembros del sector público con el alcance del **módulo**,
 para asi evitar el colisionamiento de variables y funciones con el mismo nombre en el codigo a lo largo
 de una aplicación, para poder entender mejor el patrón modular, hay que enteder algunos conceptos previos:
@@ -36,7 +37,7 @@ var myAnonymousFunction = (function(){
 })();
 ```
 #### Módulo
-Es una unidad independiente funcional que forma parte de la estructura de una aplicacíon.
+Es una unidad independiente funcional que forma parte de la estructura de una aplicación.
 ```
 var modulo = {
 	saludo : "soy parte del modulo",
@@ -64,8 +65,9 @@ no así su trabajo interno.
 
 #### Ventajas del patron modular
 - Código limpio , separado y organizado.
-- Soportan datos privados
-- Escalable
+- Soportan datos privados.
+- Codigo Escalable.
+
 #### Estructura básica del patron modular
 ```
 var modulo = (function(){
@@ -83,7 +85,7 @@ var modulo = (function(){
 /* accediendo a la parte publica de nuestro modulo */
 modulo.publicMethod();
 ```
-#### Recursos adicionales
-http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript
+#### Referencias
+http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascriptt
 https://www.safaribooksonline.com/library/view/javascript-the-good/9780596517748/
 http://toddmotto.com/mastering-the-module-pattern/
