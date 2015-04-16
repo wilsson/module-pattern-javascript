@@ -1,9 +1,11 @@
 PATRON MODULAR
 ===================
-i
-El patron modular proporcina una forma de encapsulamiento de los **metodos públicos,privados**
+Cuando empecé a escribir codigo javascript, tiraba funciones y variables desordenadamente lo que al inicio
+si funcionaba, pero a medida la aplicación fu creciendo ocurria colisiones entre mi codigo, entonces busque buenas
+formas de organizar mejor mi codigo, una de ellas fue los **patrones de diseño en javascript**, en especial el
+**patron modular** me agrado mucho por la forma forma que tiene de encapsulamiento de los **metodos públicos,privados**
 (y variables),en una sola entidad exponiendo solo los miembros del sector público con el alcance del **módulo**,
-para asi evitar el colisionamiento de variables y funciones con el mismo nombre en el codigo a lo largo
+para asi poder evitar el colisionamiento de variables y funciones con el mismo nombre en el codigo a lo largo
 de una aplicación, para poder entender mejor el patrón modular, hay que enteder algunos conceptos previos:
 
 ### Objeto literal
@@ -28,10 +30,12 @@ Estas funciónes una vez declaradas se llaman a sí mismas para inicializarse, l
 el contenido, los segundos paréntesis asumen que el interior de los primeros paréntesis es una función y la ejecuta
 inmediatamente.
 ```
+/* 01 */
 (function(){
 	alert("Hello World!");
 })();
 
+/* 02 */
 var myAnonymousFunction = (function(){
 	alert("Hello World!");
 })();
