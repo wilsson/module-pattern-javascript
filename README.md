@@ -1,7 +1,7 @@
 PATRON MODULAR
 ===================
-Cuando empecé a escribir codigo javascript, tiraba funciones y variables desordenadamente lo que al inicio
-si funcionaba, pero a medida la aplicación fu creciendo ocurria colisiones entre mi codigo, entonces busque buenas
+Cuando empecé a escribir codigo javascript, escribia funciones y variables desordenadamente lo que al inicio
+si funcionaba bien, pero a medida que el codigo fue creciendo ocurria colisiones entre mi codigo, entonces busque buenas
 formas de organizar mejor mi codigo, una de ellas fue los **patrones de diseño en javascript**, en especial el
 **patron modular** me agrado mucho por la forma forma que tiene de encapsulamiento de los **metodos públicos,privados**
 (y variables),en una sola entidad exponiendo solo los miembros del sector público con el alcance del **módulo**,
