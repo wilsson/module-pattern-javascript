@@ -2,8 +2,8 @@ PATRON MODULAR
 ===================
 El patron modular proporcina una forma de encapsulamiento de los metodos **públicos**, **privados**
 (y variables),en una sola entidad exponiendo solo los miembros del sector público con el alcance del **módulo**,
-para asi evitar el colisionamiento de variables y funciones con el mismo nombre, para poder entender mejor 
-el patrón modular, hay que enteder algunos conceptos previos:
+para asi evitar el colisionamiento de variables y funciones con el mismo nombre en el codigo a lo largo
+de una aplicación, para poder entender mejor el patrón modular, hay que enteder algunos conceptos previos:
 
 ### Objeto literal
 Un objeto literal es descrito como cero o más pares name/value, separados por comas entre llaves. Nombres dentro del objeto pueden ser cadenas o identificadores que son seguidas por 2 puntos.
@@ -51,21 +51,21 @@ modulo.myFunction();
 Es el proceso de agrupar datos y metodos en un entorno independiente.
 
 #### Metodos privados y publicos
-#### **Privado:**
-Los metodos privados son funciones que no pueden ser llamados desde fuera del ámbito donde
-se encuentran.
+##### **Privado:**
+Los metodos privados son funciones que no pueden ser llamados desde fuera del **ámbito** donde
+se entendercuentran.
 
-#### **Publico:**
-Los metodos publicos son aquellas funciones que pueden ser llamadas desde fuera de su ámbito.
+##### **Publico:**
+Los metodos publicos son funciones que pueden ser llamadas desde fuera de su **ámbito**.
 
 #### **ejemplo :**
 **Caja negra:** Un objeto en el que su comportamiento y atributos son conocidos pero
 no así su trabajo interno.
 
 #### Ventajas del patron modular
-Ayudan a mantener tu codigo limpio , separado y organizado.
-
-
+- Código limpio , separado y organizado.
+- Soportan datos privados
+- Escalable
 #### Estructura básica del patron modular
 ```
 var modulo = (function(){
@@ -83,3 +83,7 @@ var modulo = (function(){
 /* accediendo a la parte publica de nuestro modulo */
 modulo.publicMethod();
 ```
+#### Recursos adicionales
+http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript
+https://www.safaribooksonline.com/library/view/javascript-the-good/9780596517748/
+http://toddmotto.com/mastering-the-module-pattern/
