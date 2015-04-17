@@ -3,7 +3,7 @@ PATRON MODULAR
 En el mundo de javascript tu puedes escribir codigo de manera libre y sin restricciones, el único problema es abusar
 de la libertad que te da a la hora de programar. Al final uno obtiene variables y funciones repartidas a lo largo de
 todo el código y sin un orden, lo que termina siendo inmantenible. Una de las mejores practicas a la hora de escribir
-código es usar un patrón de diseño en javascript y el más utilizado es el patrón modular.
+código es usar los patrones de diseño en javascript y el más utilizado es el patrón modular.
 
 En javascript el patron modular emula el concepto de clases, de manera que somos capaces de incluir métodos
 públicos/privados y propiedades dentro de un único objeto, protegiendo las  partes particulares del ámbito global,
