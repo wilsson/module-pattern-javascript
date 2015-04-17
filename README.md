@@ -8,22 +8,39 @@ código es usar un patrón de diseño en javascript y el más utilizado es el pa
 En javascript el patron modular emula el concepto de clases, de manera que somos capaces de incluir métodos
 públicos/privados y propiedades dentro de un único objeto, protegiendo las  partes particulares del ámbito global,
 lo que ayuda a evitar la colisión de nombres de funciones y variables ya definidas a lo largo de nuestro proyecto, o
-API’s de terceros. 
+API’s de terceros, aqui unos conceptos previos para poder entender mejor el patrón modular.
 
 ### Módulo
-Un módulo es una unidad independiente funcional que forma parte de la estructura de una aplicación.
+Un módulo es una unidad independiente funcional que forma parte de la estructura de una aplicación y puede ser
+implementado con una función u objeto.
 ```
+/* modulo con objeto literal */
+
 var modulo = {
-	saludo : "soy parte del modulo",
+	saludo : "soy parte del módulo",
 	myFunction : function(){
-		alert("soy una función");
+		alert("soy una función y "+this.saludo);
 	}
 };
-/* accediendo a parte de nuestro modulo */
+
+/* accediendo nuestro modulo */
 modulo.myFunction();
+
+/* módulo con una función anonima */
+
+var modulo = function(){
+    var saludo =";soy parte del módulo";
+    var myFunction = function(){
+        alert("soy una función y ");
+    };
+};
+
+/* accediendo a nuestro modulo */
+modulo2().myFunction();
 ```
 ### Objeto literal
-Un objeto literal es descrito como cero o más pares name/value, separados por comas entre llaves. Nombres dentro del objeto pueden ser cadenas o identificadores que son seguidas por 2 puntos.
+Un objeto literal es descrito como cero o más pares name/value, separados por comas entre llaves.
+Nombres dentro del objeto pueden ser cadenas o identificadores que son seguidas por 2 puntos.
 ```
 var objectLiteral = {
     variable : "soy una variable",
