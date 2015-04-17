@@ -1,13 +1,27 @@
 PATRON MODULAR
 ===================
-Cuando empecé a escribir codigo javascript, escribia funciones y variables desordenadamente lo que al inicio
-si funcionaba bien, pero a medida que el codigo fue creciendo ocurria colisiones entre mi codigo, entonces busque buenas
-formas de organizar mejor mi codigo, una de ellas fue los **patrones de diseño en javascript**, en especial el
-**patron modular** me agrado mucho por la forma forma que tiene de encapsulamiento de los **metodos públicos,privados**
-(y variables),en una sola entidad exponiendo solo los miembros del sector público con el alcance del **módulo**,
-para asi poder evitar el colisionamiento de variables y funciones con el mismo nombre en el codigo a lo largo
-de una aplicación, para poder entender mejor el patrón modular, hay que enteder algunos conceptos previos:
+En el mundo de javascript tu puedes escribir codigo de manera libre y sin restricciones, el único problema es abusar
+de la libertad que te da a la hora de programar. Al final uno obtiene variables y funciones repartidas a lo largo de
+todo el código y sin un orden, lo que termina siendo inmantenible. Una de las mejores practicas a la hora de escribir
+código es usar un patrón de diseño en javascript y el más utilizado es el patrón modular.
 
+En javascript el patron modular emula el concepto de clases, de manera que somos capaces de incluir métodos
+públicos/privados y propiedades dentro de un único objeto, protegiendo las  partes particulares del ámbito global,
+lo que ayuda a evitar la colisión de nombres de funciones y variables ya definidas a lo largo de nuestro proyecto, o
+API’s de terceros. 
+
+### Módulo
+Un módulo es una unidad independiente funcional que forma parte de la estructura de una aplicación.
+```
+var modulo = {
+	saludo : "soy parte del modulo",
+	myFunction : function(){
+		alert("soy una función");
+	}
+};
+/* accediendo a parte de nuestro modulo */
+modulo.myFunction();
+```
 ### Objeto literal
 Un objeto literal es descrito como cero o más pares name/value, separados por comas entre llaves. Nombres dentro del objeto pueden ser cadenas o identificadores que son seguidas por 2 puntos.
 ```
@@ -39,18 +53,6 @@ inmediatamente.
 var myAnonymousFunction = (function(){
 	alert("Hello World!");
 })();
-```
-#### Módulo
-Es una unidad independiente funcional que forma parte de la estructura de una aplicación.
-```
-var modulo = {
-	saludo : "soy parte del modulo",
-	myFunction : function(){
-		alert("soy una función");
-	}
-};
-/* accediendo a parte de nuestro modulo */
-modulo.myFunction();
 ```
 #### Encapsulamiento
 Es el proceso de agrupar datos y metodos en un entorno independiente.
