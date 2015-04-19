@@ -6,7 +6,7 @@ todo el código y sin un orden, lo que termina siendo inmantenible. Una de las m
 código es usar los patrones de diseño en javascript y el más utilizado es el patrón modular.
 
 En javascript el patron modular emula el concepto de clases, de manera que somos capaces de incluir métodos
-públicos/privados y propiedades dentro de un único objeto, protegiendo las  partes particulares del ámbito global,
+públicos/privados y propiedades dentro de un único objeto, protegiendo las datos particulares del ámbito global,
 lo que ayuda a evitar la colisión de nombres de funciones y variables ya definidas a lo largo de nuestro proyecto, o
 API’s de terceros, aqui unos conceptos previos para poder entender mejor el patrón modular.
 
@@ -77,14 +77,14 @@ Es el proceso de agrupar datos y metodos en un entorno independiente.
 #### Metodos privados y publicos
 ##### **Privado:**
 Los metodos privados son funciones que no pueden ser llamados desde fuera del **ámbito** donde
-se entendercuentran.
+se encuentran.
 
 ##### **Publico:**
 Los metodos publicos son funciones que pueden ser llamadas desde fuera de su **ámbito**.
 
 #### **ejemplo :**
-**Caja negra:** Un objeto en el que su comportamiento y atributos son conocidos pero
-no así su trabajo interno.
+**Caja negra:** Objeto la cual su comportamiento y atributos son conocidos pero
+no su trabajo interno.
 
 #### Ventajas del patron modular
 - Código limpio , separado y organizado.
@@ -96,7 +96,7 @@ no así su trabajo interno.
 var modulo = (function(){
 	privateMethod = function(){
 		alert("soy un metodo privado");
-	};	
+	};
 	return {
 		publicMethod : function(){
 			alert("soy un meotodo publico");
