@@ -3,7 +3,7 @@ PATRON MODULAR
 En el mundo de javascript tu puedes escribir codigo de manera libre y sin restricciones, el único problema es abusar
 de la libertad que te da a la hora de programar. Al final uno obtiene variables y funciones repartidas a lo largo de
 todo el código y sin un orden, lo que termina siendo inmantenible. Una de las mejores practicas a la hora de escribir
-código es usar los patrones de diseño en javascript y el más utilizado es el patrón modular.
+código es usar los patrones de diseño en javascript y el más utilizado es el patron modular.
 
 En javascript el patron modular emula el concepto de clases, de manera que somos capaces de incluir métodos
 públicos/privados y propiedades dentro de un único objeto, protegiendo las datos particulares del ámbito global,
@@ -23,7 +23,7 @@ var modulo = {
 	}
 };
 
-/* accediendo nuestro modulo */
+/* accediendo a la función del modulo */
 modulo.myFunction();
 
 /* módulo con una función anonima */
@@ -35,11 +35,11 @@ var modulo = function(){
     };
 };
 
-/* accediendo a nuestro modulo */
+/* accediendo a la función del modulo */
 modulo2().myFunction();
 ```
 ### Objeto literal
-Un objeto literal es descrito como cero o más pares name/value, separados por comas entre llaves.
+Un objeto literal es descrito como cero o más pares nombre/valor, separados por comas entre llaves.
 Nombres dentro del objeto pueden ser cadenas o identificadores que son seguidas por 2 puntos.
 ```
 var objectLiteral = {
@@ -56,7 +56,7 @@ var myAnonymousFunction = function(){
 	alert("Hello World!");
 };
 ```
-#### Funciónes auto-ejecutables
+#### Funciónes auto-ejecutables (IIFE)
 Estas funciónes una vez declaradas se llaman a sí mismas para inicializarse, los primeros paréntesis encierran
 el contenido, los segundos paréntesis asumen que el interior de los primeros paréntesis es una función y la ejecuta
 inmediatamente.
@@ -75,14 +75,14 @@ var myAnonymousFunction = (function(){
 Es el proceso de agrupar datos y metodos en un entorno independiente.
 
 #### Metodos privados y publicos
-##### **Privado:**
+##### Privado:
 Los metodos privados son funciones que no pueden ser llamados desde fuera del **ámbito** donde
 se encuentran.
 
-##### **Publico:**
+##### Publico:
 Los metodos publicos son funciones que pueden ser llamadas desde fuera de su **ámbito**.
 
-#### **ejemplo :**
+#### ejemplo :
 **Caja negra:** Objeto la cual su comportamiento y atributos son conocidos pero
 no su trabajo interno.
 
@@ -91,6 +91,20 @@ no su trabajo interno.
 - Soportan datos privados.
 - Codigo Escalable.
 
+#### Entendiendo el retorno
+```
+var module = (function(){
+		return{
+			publicMethod : function(){
+				console.log("soy un metodo publico");
+			}
+		}
+})();
+```
+Como devolvemos un objeto literal, podemos acceder a sus propiedades exactamente como objetos literales.
+```
+module.publicMethod();
+```
 #### Estructura básica del patron modular
 ```
 var modulo = (function(){
