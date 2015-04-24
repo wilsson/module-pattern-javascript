@@ -70,6 +70,11 @@ inmediatamente.
 var myAnonymousFunction = (function(){
 	alert("Hello World!");
 })();
+
+/* 03 */
+var myAnonymousFunction = (function(message){
+	alert(message);
+})("hello world");
 ```
 #### Encapsulamiento
 Es el proceso de agrupar datos y metodos en un entorno independiente.
@@ -92,6 +97,8 @@ no su trabajo interno.
 - Codigo Escalable.
 
 #### Entendiendo el retorno
+Communmente los móulos retornan un objeto, la cual los metodos ligados a dicho objeto seran
+accesibles desde fuera del módulo.
 ```
 var module = (function(){
 		return{
