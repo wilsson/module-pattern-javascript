@@ -1,6 +1,6 @@
 PATRON MODULAR
 ===================
-En el mundo de javascript tu puedes escribir codigo de manera libre y sin restricciones, el único problema es abusar
+En el mundo de javascript tu puedes escribir código de manera libre y sin restricciones, el único problema es abusar
 de la libertad que te da a la hora de programar. Al final uno obtiene variables y funciones repartidas a lo largo de
 todo el código y sin un orden, lo que termina siendo inmantenible. Una de las mejores practicas a la hora de escribir
 código es usar los patrones de diseño en javascript y el más utilizado es el patron modular.
@@ -14,7 +14,7 @@ API’s de terceros, aqui unos conceptos previos para poder entender mejor el pa
 Un módulo es una unidad independiente funcional que forma parte de la estructura de una aplicación y puede ser
 implementado con una función u objeto.
 ```
-/* modulo con objeto literal */
+/* módulo con objeto literal */
 
 var modulo = {
 	saludo : "soy parte del módulo",
@@ -23,7 +23,7 @@ var modulo = {
 	}
 };
 
-/* accediendo a la función del modulo */
+/* accediendo a un metodo de nuestro módulo */
 modulo.myFunction();
 
 /* módulo con una función anonima */
@@ -35,7 +35,7 @@ var modulo = function(){
     };
 };
 
-/* accediendo a la función del modulo */
+/* accediendo a la función del módulo */
 modulo2().myFunction();
 ```
 ### Objeto literal
@@ -48,6 +48,8 @@ var objectLiteral = {
       // ...
     }
 };
+/* accediendo a las propiedades de nuestro objeto literal */
+moduloulo.saludo
 ```
 #### Función anónima
 Las funciónes anónimas son funciónes sin nombre, comúnmente asociados a una variable.
@@ -94,7 +96,7 @@ no su trabajo interno.
 #### Ventajas del patron modular
 - Código limpio , separado y organizado.
 - Soportan datos privados.
-- Codigo Escalable.
+- Código Escalable.
 
 #### Entendiendo el retorno
 Communmente los móulos retornan un objeto, la cual los metodos ligados a dicho objeto seran
