@@ -8,48 +8,48 @@ código es usar los patrones de diseño en javascript y el más utilizado es el 
 En javascript el patron modular emula el concepto de clases, de manera que somos capaces de incluir métodos
 públicos/privados y propiedades dentro de un único objeto, protegiendo las datos particulares del ámbito global,
 lo que ayuda a evitar la colisión de nombres de funciones y variables ya definidas a lo largo de nuestro proyecto, o
-API’s de terceros, aqui unos conceptos previos para poder entender mejor el patrón modular.
+API’s de terceros, aquí unos conceptos previos para poder entender mejor el patrón modular.
 
 ### Módulo
-Un módulo es una unidad independiente funcional que forma parte de la estructura de una aplicación y puede ser
-implementado con una función u objeto.
+Un módulo es una unidad independiente funcional que forma parte de la estructura de una aplicación y puede ser.
 ```
-/* módulo con objeto literal */
+var modulo = (function(){
+    //- - -
+})();
 
-var modulo = {
-	saludo : "soy parte del módulo",
-	myFunction : function(){
-		alert("soy una función y "+this.saludo);
-	}
-};
-
-/* accediendo a un metodo de nuestro módulo */
-modulo.myFunction();
-
-/* módulo con una función anonima */
-
-var modulo = function(){
-    var saludo =";soy parte del módulo";
-    var myFunction = function(){
-        alert("soy una función y ");
-    };
-};
-
-/* accediendo a la función del módulo */
-modulo2().myFunction();
 ```
+```
+var automovil = (function(colorDeAuto){
+    var color =colorDeAuto;
+    return{
+        avanzar : function(){
+            console.log("el auto "+color+" esta avanzando");
+        },
+
+        retroceder : function(){
+            console.log("el auto "+color+" esta retrocediendo");
+        }
+    }
+})("azul");
+
+/* accediendo los metodos retroceder y avanzar de nuestro módulo */
+automovil.retroceder();
+automovil.avanzar();
+```
+
 ### Objeto literal
 Un objeto literal es descrito como cero o más pares nombre/valor, separados por comas entre llaves.
 Nombres dentro del objeto pueden ser cadenas o identificadores que son seguidas por 2 puntos.
 ```
 var objectLiteral = {
-    variable : "soy una variable",
+    /* los objetos literales pueden contener propiedades y métodos */
+    saludo : "soy un objeto literal",
     myFunction : function(){
       // ...
     }
 };
 /* accediendo a las propiedades de nuestro objeto literal */
-moduloulo.saludo
+objectLiteral.saludo
 ```
 #### Función anónima
 Las funciónes anónimas son funciónes sin nombre, comúnmente asociados a una variable.
