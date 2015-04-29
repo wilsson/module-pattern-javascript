@@ -131,6 +131,23 @@ var modulo = (function(){
 /* accediendo a la parte publica de nuestro modulo */
 modulo.publicMethod();
 ```
+#### Closure
+Los clousures son funciones definidas dentro de otras funciones, así mismo dicha función interna tiene acceso al ámbito de la función contenedora.
+```
+function exampleClousure(arg1, arg2){
+    var localVar = 8;
+    function multiplicador(innerArg){
+        return arg1 * arg2 * innerArg * localVar;
+    }
+    /* retornar una referencia de la función interna definida como:
+       multiplicador 
+    */
+    return multiplicador;
+}
+
+var globalVar = exampleClousure(2, 4);
+globalVar(8);
+```
 #### Referencias
 http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascriptt
 https://www.safaribooksonline.com/library/view/javascript-the-good/9780596517748/
