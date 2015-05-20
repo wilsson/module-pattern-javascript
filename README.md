@@ -146,6 +146,7 @@ module.publicMethod();
 - Código limpio , separado y organizado.
 - Soportan datos privados.
 - Código Escalable.
+- 
 #### Referencias
 http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascriptt
 https://www.safaribooksonline.com/library/view/javascript-the-good/9780596517748/
