@@ -1,0 +1,38 @@
+.tabs{
+    padding:0;
+    margin:-1px;
+    text-align:center;
+}
+.tabs_item{
+    color:white;
+    display:inline-block;
+}
+
+.tabs_item_target{
+    cursor:pointer;
+    cursor:pointer;
+    color:black;
+    text-decoration:none;
+    border:1px solid black;
+    padding:10px 15px;
+    display:block;
+    background-color:#ccc;
+}
+
+.tabs_content{
+    border:1px solid black;
+    padding:10px 20px;
+}
+
+.tabs_content_pane{
+    display:none
+}
+
+.is_active{
+    display:block;
+}
+
+.is_selected{
+    background-color:white;
+    border-bottom:1px solid white;
+}
