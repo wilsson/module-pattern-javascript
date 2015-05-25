@@ -6,27 +6,33 @@
     </head>
 
     <body>
+        <h1 class="titulo">Demo tabs</h1>
         <ul class="tabs">
-            <li class="tabs_item">
-                <a class="tabs_item_target is_selected" data-tab="tab_one">JavaScript</a>
-            </li>
-            <li class="tabs_item">
-                <a class="tabs_item_target" data-tab="tab_two">Html5</a>
-            </li>
-            <li class="tabs_item">
-                <a class="tabs_item_target" data-tab="tab_three">Css</a>
-            </li>
+          <li class="tabs_item">
+            <a class="tabs_item_target is_selected" data-tab="tab_one">JavaScript</a>
+          </li>
+          <li class="tabs_item">
+            <a class="tabs_item_target" data-tab="tab_two">Html</a>
+          </li>
+          <li class="tabs_item">
+            <a class="tabs_item_target" data-tab="tab_three">Css</a>
+          </li>
         </ul>
         <div class="tabs_content">
-            <div id="tab_one" class="tabs_content_pane is_active">
-                contenido JavaScript
-            </div>
-            <div id="tab_two" class="tabs_content_pane">
-                contenido Html5
-            </div>
-            <div id="tab_three" class="tabs_content_pane">
-                contenido Css
-            </div>
+          <div id="tab_one" class="tabs_content_pane is_active">
+            JavaScript fue desarrollado originalmente por Brendan Eich de Netscape con el nombre de Mocha, el cual fue renombrado posteriormente a LiveScript, para finalmente quedar como JavaScript. El cambio de nombre coincidió aproximadamente con el momento en
+            que Netscape agregó compatibilidad con la tecnología Java en su navegador web Netscape Navigator en la versión 2.002 en diciembre de 1995. La denominación produjo confusión, dando la impresión de que el lenguaje es una prolongación de Java, y se ha
+            caracterizado por muchos como una estrategia de mercadotecnia de Netscape para obtener prestigio e innovar en lo que eran los nuevos lenguajes de programación web.
+          </div>
+          <div id="tab_two" class="tabs_content_pane">
+            HTML, siglas de HyperText Markup Language («lenguaje de marcas de hipertexto»), hace referencia al lenguaje de marcado para la elaboración de páginas web. Es un estándar que sirve de referencia para la elaboración de páginas web en sus diferentes versiones,
+            define una estructura básica y un código (denominado código HTML) para la definición de contenido de una página web, como texto, imágenes, videos, entre otros. Es un estándar a cargo de la W3C, organización dedicada a la estandarización de casi todas
+            las tecnologías ligadas a la web, sobre todo en lo referente a su escritura e interpretación.
+          </div>
+          <div id="tab_three" class="tabs_content_pane">
+            Hoja de estilo en cascada o CSS (siglas en inglés de cascading style sheets) es un lenguaje usado para definir y crear la presentación de un documento estructurado escrito en HTML o XML (y por extensión en XHTML). El World Wide Web Consortium (W3C) es
+            el encargado de formular la especificación de las hojas de estilo que servirán de estándar para los agentes de usuario o navegadores.
+          </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
