@@ -7,12 +7,12 @@ En javascript el patron modular emula el concepto de clases, de manera que somos
 ### Objeto literal
 EL patrón modular se basa en parte en los objetos literales por ende es importante entenderlo.
 Un objeto literal es descrito como cero o más pares nombre/valor, separados por comas entre llaves.
-Nombres dentro del objeto pueden ser cadenas o identificadores que son seguidas por 2 puntos, dichos objetos también pueden contener otros objetos y funciones.
+Los nombres dentro del objeto pueden ser cadenas o identificadores que son seguidas por 2 puntos, dichos objetos también pueden contener otros objetos y funciones.
 ```
-var objectLiteral = {
-    /* los objetos literales pueden contener propiedades y métodos */    
+var objetoLiteral = {
+    /* los objetos literales pueden contener propiedades y métodos */
     saludo : "soy un objeto literal",
-    myFunction : function(){
+    miFuncion : function(){
       // código
     }
 };
@@ -62,10 +62,10 @@ automovil.avanzar();
 #### Función anónima
 Las funciónes anónimas son funciónes sin nombre, comúnmente asociados a una variable.
 ```
-var myAnonymousFunction = function(){
-    alert("Hello World!");
+var miFuncionAnonima = function(){
+    alert("Hola mundo!");
 };
-myAnonymousFunction();
+miFuncionAnonima();
 ```
 #### Funciones auto-ejecutables (IIFE)
 Estas funciónes una vez declaradas se llaman a sí mismas para inicializarse, los primeros paréntesis encierran el contenido, los segundos paréntesis asumen que el interior de los primeros paréntesis es una función y la ejecuta inmediatamente.
@@ -84,15 +84,15 @@ var myAnonymousFunction = (function(){
 var myAnonymousFunction = (function(message){
     alert(message);
 })("hello world");
-// todo lo que le precede a los 2 últimos paracentesis se ejecuta inmediatamente
+// todo lo que le precede a los 2 últimos paréntesis se ejecuta inmediatamente
 ```
 #### Clousure
 Los clousures son funciones definidas dentro de otras funciones, así mismo dicha función interna tiene acceso al ámbito de la función contenedora.
 ```
-function exampleClousure(arg1, arg2){
+function ejemploClousure(arg1, arg2){
     var localVar = 8;
-    function multiplicador(innerArg){
-        return arg1 * arg2 * innerArg * localVar;
+    function multiplicador(interArg){
+        return arg1 * arg2 * interArg * localVar;
     }
     /* retornar una referencia de la función interna definida como:
        multiplicador 
@@ -101,7 +101,7 @@ function exampleClousure(arg1, arg2){
 }
 
 /* la función devuelve una función, por lo tanto necesita asignación */
-var globalVar = exampleClousure(2, 4);
+var globalVar = ejemploClousure(2,4);
 /* y luego llamar a */
 globalVar(8);
 ```
