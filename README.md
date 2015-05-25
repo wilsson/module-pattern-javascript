@@ -1,10 +1,11 @@
 PATRON MODULAR
 ===================
-En el mundo de javascript tu puedes escribir código de manera libre y sin restricciones, el único problema es abusar de la libertad que te da a la hora de programar. Al final uno obtiene variables y funciones repartidas a lo largo de todo el código y sin un orden, lo que termina siendo inmantenible. Una de las mejores practicas a la hora de escribir código es usar los patrones de diseño en javascript y el más utilizado es el patron modular.
+En el mundo de javascript existen muchas facilidades de programar, el único detalle es abusar de sus facilidades. Al final uno obtiene variables y funciones repartidas a lo largo de todo el código y sin un orden, lo que termina siendo inmantenible. Una de las mejores practicas a la hora de escribir código es usar los patrones de diseño en javascript y el más utilizado es el patron modular.
 
 En javascript el patron modular emula el concepto de clases, de manera que somos capaces de incluir métodos públicos/privados y propiedades dentro de un único objeto, protegiendo las datos particulares del ámbito global, lo que ayuda a evitar la colisión de nombres de funciones y variables ya definidas a lo largo de nuestro proyecto, o API’s de terceros, a continuación unos conceptos previos para poder entender mejor el patrón modular.
+
 ### Objeto literal
-EL patron modular se basa en parte en los objetos literales por ende es importante entenderlo.
+EL patrón modular se basa en parte en los objetos literales por ende es importante entenderlo.
 Un objeto literal es descrito como cero o más pares nombre/valor, separados por comas entre llaves.
 Nombres dentro del objeto pueden ser cadenas o identificadores que son seguidas por 2 puntos, dichos objetos también pueden contener otros objetos y funciones.
 ```
@@ -18,7 +19,7 @@ var objectLiteral = {
 /* accediendo a una propiedad de nuestro objeto literal persona */
 objectLiteral.saludo
 ```
-Un ejemplo de un modulo usando un objeto literal.
+Un ejemplo de un módulo usando un objeto literal.
 ```
 var persona = {
     /* definiendo propiedades */
@@ -34,7 +35,7 @@ persona.comer();
 ```
 #### Módulo
 Un módulo es una unidad independiente funcional que forma parte de la estructura de una aplicación.
-Podemos usar funciones y closures para crear módulos.
+Podemos usar funciones y closures(cierres) para crear módulos.
 ```
 var modulo = (function(){
     //- - -
@@ -105,7 +106,7 @@ var globalVar = exampleClousure(2, 4);
 globalVar(8);
 ```
 #### Métodos privados
-Los métodos privados son funciones que no pueden ser llamados desde fuera del ámbito donde se encuentran, dichos métodos podrán ser invocados en nuestros métodos públicos.
+Los métodos privados son funciones que no pueden ser llamados desde fuera del ámbito donde han sido declarados, dichos métodos podrán ser invocados en nuestros métodos públicos.
 ```
 var modulo = (function () {
     var privateMethod = function (message1) {
@@ -142,7 +143,7 @@ var module = (function(){
 /* accediendo nuestro método publico */
 module.publicMethod();
 ```
-#### Ventajas del patron modular
+#### Ventajas del patrón modular
 - Código limpio , separado y organizado.
 - Soportan datos privados.
 - Código Escalable.
