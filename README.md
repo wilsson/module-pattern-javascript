@@ -8,7 +8,7 @@ En javascript el patron modular emula el concepto de clases, de manera que somos
 EL patrón modular se basa en parte en los objetos literales por ende es importante entenderlo.
 Un objeto literal es descrito como cero o más pares nombre/valor, separados por comas entre llaves.
 Nombres dentro del objeto pueden ser cadenas o identificadores que son seguidas por 2 puntos, dichos objetos también pueden contener otros objetos y funciones.
-```
+```js
 var objectLiteral = {
     /* los objetos literales pueden contener propiedades y métodos */    
     saludo : "soy un objeto literal",
@@ -20,7 +20,7 @@ var objectLiteral = {
 objectLiteral.saludo
 ```
 Un ejemplo de un módulo usando un objeto literal.
-```
+```js
 var persona = {
     /* definiendo propiedades */
     nombre : "adan",
@@ -36,13 +36,13 @@ persona.comer();
 #### Módulo
 Un módulo es una unidad independiente funcional que forma parte de la estructura de una aplicación.
 Podemos usar funciones y closures(cierres) para crear módulos.
-```
+```js
 var modulo = (function(){
     //- - -
 });
 ```
 Un ejemplo más completo:
-```
+```js
 var automovil = (function(colorDeAuto){
     var color = colorDeAuto;
     return{
@@ -61,7 +61,7 @@ automovil.avanzar();
 ```
 #### Función anónima
 Las funciónes anónimas son funciónes sin nombre, comúnmente asociados a una variable.
-```
+```js
 var myAnonymousFunction = function(){
     alert("Hello World!");
 };
@@ -69,7 +69,7 @@ myAnonymousFunction();
 ```
 #### Funciones auto-ejecutables (IIFE)
 Estas funciónes una vez declaradas se llaman a sí mismas para inicializarse, los primeros paréntesis encierran el contenido, los segundos paréntesis asumen que el interior de los primeros paréntesis es una función y la ejecuta inmediatamente.
-```
+```js
 /* 01 */
 (function(){
     alert("Hello World!");
@@ -88,7 +88,7 @@ var myAnonymousFunction = (function(message){
 ```
 #### Clousure
 Los clousures son funciones definidas dentro de otras funciones, así mismo dicha función interna tiene acceso al ámbito de la función contenedora.
-```
+```js
 function exampleClousure(arg1, arg2){
     var localVar = 8;
     function multiplicador(innerArg){
@@ -107,7 +107,7 @@ globalVar(8);
 ```
 #### Métodos privados
 Los métodos privados son funciones que no pueden ser llamados desde fuera del ámbito donde han sido declarados, dichos métodos podrán ser invocados en nuestros métodos públicos.
-```
+```js
 var modulo = (function () {
     var privateMethod = function (message1) {
         console.log(message1);
@@ -125,7 +125,7 @@ modulo.publicMethod("mi mensaje");
 ```
 #### Entendiendo el retorno
 Comúnmente los módulos retornan un objeto, la cual los métodos ligados a dicho objeto serán accesibles desde fuera del módulo.
-```
+```js
 var module = (function(){
     /* simple método privado */
     var privateMethod = function(){
@@ -150,7 +150,7 @@ module.publicMethod();
 
 Bien, ahora que ya tenemos los algunos conceptos definidos vamos a realizar un ejercicio la cual sera realizar tabs, con una estructura mas avanzada, vamos a realizarlo con jquery.
 #### 1. DEFINIMOS NUESTRA ESTRUCTURA HTML
-```
+```html
 <ul class="tabs">
     <li class="tabs_item">
         <a class="tabs_item_target is_selected" data-tab="tab_one">JavaScript</a>
@@ -177,7 +177,7 @@ Bien, ahora que ya tenemos los algunos conceptos definidos vamos a realizar un e
 #### 2. DEFINIMOS NUESTRA ESTRUCTURA JAVASCRIPT
 A continuación se muestra una estructura modular mas avanzada y explicaremos paso a paso las partes que la componen.
 
-```
+```js
 // Definimos la variable tabs la cual contendrá todo nuestro modulo.
 var tabs = (function(){
     // Objeto la cual establecemos valores que vamos a usar mas adelante en este ámbito.
@@ -221,7 +221,7 @@ tabs.init();
 ```
 #### 3. CREACIÓN DE NUESTRO MODULO
 Finalmente luego de haber entendido nuestra estructura anterior, procedemos a la creación de nuestro modulo tabs.
-```
+```js
 var tabs = (function(){
     var st = {
         tabs             : '.tabs',
