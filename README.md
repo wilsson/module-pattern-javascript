@@ -88,7 +88,7 @@ var myAnonymousFunction = (function(message){
 ```
 #### Clousure
 Los clousures son funciones definidas dentro de otras funciones, así mismo dicha función interna tiene acceso al ámbito de la función contenedora.
-```
+```js
 function ejemploClousure(arg1, arg2){
     var localVar = 8;
     function multiplicador(interArg){
