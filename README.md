@@ -7,12 +7,19 @@ En javascript el patron modular emula el concepto de clases, de manera que somos
 ### Objeto literal
 EL patrón modular se basa en parte en los objetos literales por ende es importante entenderlo.
 Un objeto literal es descrito como cero o más pares nombre/valor, separados por comas entre llaves.
+<<<<<<< HEAD
 Nombres dentro del objeto pueden ser cadenas o identificadores que son seguidas por 2 puntos, dichos objetos también pueden contener otros objetos y funciones.
 ```js
 var objectLiteral = {
     /* los objetos literales pueden contener propiedades y métodos */    
+=======
+Los nombres dentro del objeto pueden ser cadenas o identificadores que son seguidas por 2 puntos, dichos objetos también pueden contener otros objetos y funciones.
+```
+var objetoLiteral = {
+    /* los objetos literales pueden contener propiedades y métodos */
+>>>>>>> 899d5a5a429876781fb0576126a686196cc0366e
     saludo : "soy un objeto literal",
-    myFunction : function(){
+    miFuncion : function(){
       // código
     }
 };
@@ -61,11 +68,17 @@ automovil.avanzar();
 ```
 #### Función anónima
 Las funciónes anónimas son funciónes sin nombre, comúnmente asociados a una variable.
+<<<<<<< HEAD
 ```js
 var myAnonymousFunction = function(){
     alert("Hello World!");
+=======
+```
+var miFuncionAnonima = function(){
+    alert("Hola mundo!");
+>>>>>>> 899d5a5a429876781fb0576126a686196cc0366e
 };
-myAnonymousFunction();
+miFuncionAnonima();
 ```
 #### Funciones auto-ejecutables (IIFE)
 Estas funciónes una vez declaradas se llaman a sí mismas para inicializarse, los primeros paréntesis encierran el contenido, los segundos paréntesis asumen que el interior de los primeros paréntesis es una función y la ejecuta inmediatamente.
@@ -84,15 +97,20 @@ var myAnonymousFunction = (function(){
 var myAnonymousFunction = (function(message){
     alert(message);
 })("hello world");
-// todo lo que le precede a los 2 últimos paracentesis se ejecuta inmediatamente
+// todo lo que le precede a los 2 últimos paréntesis se ejecuta inmediatamente
 ```
 #### Clousure
 Los clousures son funciones definidas dentro de otras funciones, así mismo dicha función interna tiene acceso al ámbito de la función contenedora.
+<<<<<<< HEAD
 ```js
 function exampleClousure(arg1, arg2){
+=======
+```
+function ejemploClousure(arg1, arg2){
+>>>>>>> 899d5a5a429876781fb0576126a686196cc0366e
     var localVar = 8;
-    function multiplicador(innerArg){
-        return arg1 * arg2 * innerArg * localVar;
+    function multiplicador(interArg){
+        return arg1 * arg2 * interArg * localVar;
     }
     /* retornar una referencia de la función interna definida como:
        multiplicador 
@@ -101,7 +119,7 @@ function exampleClousure(arg1, arg2){
 }
 
 /* la función devuelve una función, por lo tanto necesita asignación */
-var globalVar = exampleClousure(2, 4);
+var globalVar = ejemploClousure(2,4);
 /* y luego llamar a */
 globalVar(8);
 ```
@@ -221,6 +239,7 @@ tabs.init();
 ```
 #### 3. CREACIÓN DE NUESTRO MODULO
 Finalmente luego de haber entendido nuestra estructura anterior, procedemos a la creación de nuestro modulo tabs.
+<<<<<<< HEAD
 ```js
 var tabs = (function(){
     var st = {
@@ -228,37 +247,46 @@ var tabs = (function(){
         tabs_item        : '.tabs_item',
         tabs_item_target : '.tabs_item_target'
     };
+=======
+```
+var tabs = (function() {
+  var st = {
+    tabs: '.tabs',
+    tabs_item: '.tabs_item',
+    tabs_item_target: '.tabs_item_target'
+  };
+>>>>>>> 899d5a5a429876781fb0576126a686196cc0366e
 
-    var dom = {}
-    
-    var catchDom = function(){
-        dom.tabs_item_target = $(st.tabs_item_target,st.tabs);
-    };
+  var dom = {}
 
-    var suscribeEvents = function(){
-        dom.tabs_item_target.on('click',events.eSelectedTab);
-    };
+  var catchDom = function() {
+    dom.tabs_item_target = $(st.tabs_item_target, st.tabs);
+  };
 
-    var events = {
-        eSelectedTab : function(){
-            _this = $(this);
-            _this.addClass('is_selected');
-            var brother = _this.parent(st.tabs_item).siblings();
-            $(st.tabs_item_target,brother).removeClass('is_selected');
-            var pane = _this.attr('data-tab');
-            $("#"+pane).addClass('is_active');
-            $("#"+pane).siblings().removeClass('is_active');
-        }
-    };
-    
-    var initialize = function(){
-        catchDom();
-        suscribeEvents();
-    };
+  var suscribeEvents = function() {
+    dom.tabs_item_target.on('click', events.eSelectedTab);
+  };
 
-    return{
-        init:initialize
+  var events = {
+    eSelectedTab: function(e) {
+      self = $(this);
+      self.addClass('is_selected');
+      var brother = self.parent(st.tabs_item).siblings();
+      $(st.tabs_item_target, brother).removeClass('is_selected');
+      var pane = self.attr('data-tab');
+      $("#" + pane).addClass('is_active');
+      $("#" + pane).siblings().removeClass('is_active');
     }
+  };
+
+  var initialize = function() {
+    catchDom();
+    suscribeEvents();
+  };
+
+  return {
+    init: initialize
+  }
 })();
 
 tabs.init();
