@@ -1,8 +1,8 @@
-PATRON MODULAR
+PATRÓN MODULAR
 ===================
-En el mundo de javascript existen muchas facilidades de programar, el único detalle es abusar de sus facilidades. Al final uno obtiene variables y funciones repartidas a lo largo de todo el código y sin un orden, lo que termina siendo inmantenible. Una de las mejores practicas a la hora de escribir código es usar los patrones de diseño en javascript y el más utilizado es el patron modular.
+En el mundo de javascript existen muchas facilidades de programar, el único detalle es abusar de sus facilidades. Al final uno obtiene variables y funciones repartidas a lo largo de todo el código y sin un orden, lo que termina siendo inmantenible. Una de las mejores practicas a la hora de escribir código es usar los patrones de diseño en javascript y el más utilizado es el patròn modular.
 
-En javascript el patron modular emula el concepto de clases, de manera que somos capaces de incluir métodos públicos/privados y propiedades dentro de un único objeto, protegiendo las datos particulares del ámbito global, lo que ayuda a evitar la colisión de nombres de funciones y variables ya definidas a lo largo de nuestro proyecto, o API’s de terceros, a continuación unos conceptos previos para poder entender mejor el patrón modular.
+En javascript el patrón modular emula el concepto de clases, de manera que somos capaces de incluir métodos públicos/privados y propiedades dentro de un único objeto, protegiendo las datos particulares del ámbito global, lo que ayuda a evitar la colisión de nombres de funciones y variables ya definidas a lo largo de nuestro proyecto, o API’s de terceros, a continuación unos conceptos previos para poder entender mejor el patrón modular.
 
 ### Objeto literal
 EL patrón modular se basa en parte en los objetos literales por ende es importante entenderlo.
