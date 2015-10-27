@@ -266,3 +266,26 @@ tabs.init();
 #### Referencias
 http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascriptt
 https://www.safaribooksonline.com/library/view/javascript-the-good/9780596517748/
+
+Si deseas probar la demo del ejemplo, ejecutar:
+
+```
+npm install
+```
+```
+node server
+```
+
+Lo podrás visualizar en.
+
+```
+localhost:4000
+```
+
+Si tienes conflictos con el puerto modificar en server.js, el primer parámetro del metodo listen y cambiarlo por un puerto que tenga disponible.
+
+```js
+app.listen(4000,function(){
+  console.log('server ready!');
+});
+```
